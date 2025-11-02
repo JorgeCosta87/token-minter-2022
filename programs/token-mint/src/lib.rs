@@ -10,6 +10,7 @@ pub use instructions::*;
 pub mod token_mint {
     use super::*;
 
+    #[allow(unused_variables)]
     pub fn create_mint(
         ctx: Context<CreateMint>,
         args: TokenMetadataArgs,

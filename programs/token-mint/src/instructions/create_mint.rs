@@ -1,5 +1,4 @@
 use anchor_lang::prelude::*;
-use anchor_lang::solana_program::sysvar::rent::Rent;
 use anchor_lang::system_program::{transfer, Transfer};
 use anchor_spl::token_interface::{
     token_metadata_initialize, Mint, Token2022, TokenMetadataInitialize,
@@ -15,7 +14,7 @@ pub struct TokenMetadataArgs {
 }
 
 #[derive(Accounts)]
-#[instruction(decimals: u8)]
+#[instruction(args: TokenMetadataArgs, decimals: u8)]
 pub struct CreateMint<'info> {
     #[account(mut)]
     pub payer: Signer<'info>,
