@@ -21,7 +21,6 @@ The program implements two main instructions:
 
 2. **mint_token**: Mints tokens to a recipient
    - Automatically creates associated token account if needed
-   - Mints the specified amount using proper decimal scaling
 
 ## Token Extensions
 
@@ -41,7 +40,7 @@ Token metadata (name, symbol, URI) is stored directly in the mint account using 
 - SPL Token Metadata Interface for on-chain metadata
 
 ### Frontend (Next.js/TypeScript)
-- **Gill**: Type-safe Solana client library for program interaction
+- **Gill**: a client library for interacting with the Solana blockchain.
 - **Codama**: IDL-to-TypeScript code generator that produces type-safe client code from Anchor IDLs
 - Wallet integration via `@wallet-ui/react`
 
