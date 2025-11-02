@@ -36,7 +36,7 @@ impl<'info> MintToken<'info> {
         let cpi = CpiContext::new(
             self.token_program.to_account_info(), mint_to_acc);
 
-        mint_to(cpi, amount * 10u64.pow(self.mint_account.decimals as u32))?;
+        mint_to(cpi, amount)?;
 
         msg!(
             "Token minted successfully. Mint: {:?}\n, to: {:?}\n, amount {}\n",
